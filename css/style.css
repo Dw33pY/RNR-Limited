@@ -15,7 +15,6 @@
   --rnr-service-gradient: linear-gradient(135deg, var(--rnr-teal) 0%, #5ab9ea 100%);
   --rnr-gradient-blue: linear-gradient(135deg, var(--rnr-deep-blue) 0%, var(--rnr-bright-blue) 50%, var(--rnr-light-blue) 100%);
   
-  
   /* Shadows */
   --rnr-shadow-sm: 0 2px 8px rgba(10, 36, 99, 0.1);
   --rnr-shadow-md: 0 4px 12px rgba(10, 36, 99, 0.15);
@@ -95,22 +94,21 @@ a {
   transform: translateY(-2px);
 }
 
-/* Navigation - Glassmorphism */
+/* Navigation */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.15); /* translucent white */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1000;
   padding: 1rem 0;
   transition: var(--rnr-transition);
 }
-
 
 .navbar.scrolled {
   padding: 0.5rem 0;
@@ -121,23 +119,17 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* Important for absolute positioning */
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 2rem;
+  padding: 0 2rem;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  z-index: 2; /* Ensure logo stays above other elements */
+  z-index: 2;
 }
-
-.logo-container a{
-  display: inline-block;
-}
-
 
 .logo {
   height: 72px;
@@ -167,19 +159,17 @@ a {
   z-index: 1;
 }
 
-/* Optional animation */
-.brand-name:hover {
-  animation: gradientPulse 2s ease infinite;
-  background-size: 200% 200%;
-}
-
 @keyframes gradientPulse {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Underline effect */
+.brand-name:hover {
+  animation: gradientPulse 2s ease infinite;
+  background-size: 200% 200%;
+}
+
 .brand-name::after {
   content: '';
   position: absolute;
@@ -199,14 +189,9 @@ a {
   transform-origin: left;
 }
 
-
-
 .nav-links {
-    margin-left: 50px;
   display: flex;
   list-style: none;
-  justify-self: end;
-  right: 3%;
 }
 
 .nav-links li {
@@ -247,22 +232,25 @@ a {
   font-size: 1.5rem;
   color: var(--rnr-blue);
   cursor: pointer;
+  z-index: 1001;
+  transition: var(--rnr-transition);
+}
+
+.mobile-menu-btn:hover {
+  color: var(--rnr-orange);
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  /* height: 120vh; */
   min-height: 700px;
   background: var(--rnr-service-gradient);
   color: white;
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: 105px; /* Account for fixed navbar */
+  margin-top: 105px;
 }
-
-
 
 .hero::before {
   content: '';
@@ -343,28 +331,19 @@ a {
 }
 
 @keyframes floatHero {
-  0%, 100% {
-    transform: perspective(1200px) translateY(0px);
-  }
-  50% {
-    transform: perspective(1200px) translateY(-8px);
-  }
+  0%, 100% { transform: perspective(1200px) translateY(0px); }
+  50% { transform: perspective(1200px) translateY(-8px); }
 }
+
 .hero-text h1, .hero-text p, .hero-buttons {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease forwards;
 }
 
-.hero-text h1 {
-  animation-delay: 0.2s;
-}
-.hero-text p {
-  animation-delay: 0.4s;
-}
-.hero-buttons {
-  animation-delay: 0.6s;
-}
+.hero-text h1 { animation-delay: 0.2s; }
+.hero-text p { animation-delay: 0.4s; }
+.hero-buttons { animation-delay: 0.6s; }
 
 @keyframes fadeUp {
   to {
@@ -372,7 +351,6 @@ a {
     transform: translateY(0);
   }
 }
-
 
 /* Features Section */
 .section {
@@ -644,16 +622,9 @@ a {
   margin-top: 0.25rem;
 }
 
-
 .payment-methods {
   margin-top: 2rem;
 }
-
-/* .payment-methods h4 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-} */
 
 .payment-icons {
   display: flex;
@@ -674,7 +645,6 @@ a {
 .payment-icons img:hover {
   opacity: 1;
   transform: translateY(-2px);
-  transform: scale(1.5);
 }
 
 .payment-methods h4 {
@@ -695,25 +665,22 @@ a {
   background-color: var(--rnr-orange);
 }
 
-/* Specific adjustments for certain logos */
 .payment-icons img[alt="M-Pesa"] {
-  height: 38px; /* Slightly larger for better visibility */
+  height: 38px;
 }
 
 .payment-icons img[alt="Airtel Money"] {
-  filter: none; /* Preserve original colors */
+  filter: none;
   height: 22px;
 }
 
-.payment-icons img[alt= "Mastercard"] {
-  height: 38px; /* Adjusted for better visibility */
+.payment-icons img[alt="Mastercard"] {
+  height: 38px;
 }
 
 .payment-icons img[alt="BankTransfer"] {
-  height: 28px; /* Adjusted for better visibility */
+  height: 28px;
 }
-
-
 
 .footer-bottom {
   text-align: center;
@@ -741,8 +708,6 @@ a {
   .hero-image {
     max-width: 500px;
     margin: 0 auto;
-
-
   }
 
   .brand-center {
@@ -772,41 +737,39 @@ a {
     grid-column: 1 / -1;
     width: 100%;
   }
-
-
-
 }
 
+/* Mobile Navigation Styles */
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
+    position: relative;
+    z-index: 1001;
   }
 
-}
-  
-  /* Mobile Navigation Styles */
-@media (max-width: 768px) {
   .nav-links {
     position: fixed;
-    top: 72px;
+    top: 0;
     left: 0;
     width: 100%;
-    background: var(--rnr-hero-gradient);
+    height: 100vh;
+    background: var(--rnr-gradient-blue);
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0;
+    justify-content: center;
+    padding: 6rem 2rem 2rem;
     gap: 1.5rem;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 1000;
     box-shadow: none;
     pointer-events: none;
-    display: flex; /* Ensure it's flex even on mobile */
+    overflow-y: auto;
   }
   
   .nav-links.active {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
     pointer-events: all;
     box-shadow: 0 10px 25px rgba(10, 36, 99, 0.2);
@@ -815,15 +778,48 @@ a {
   .nav-links li {
     margin: 0;
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateX(-20px);
     transition: all 0.5s ease;
+    width: 100%;
+    text-align: center;
   }
   
   .nav-links.active li {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
   
+  /* Staggered animation for menu items */
+  .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+  .nav-links.active li:nth-child(2) { transition-delay: 0.2s; }
+  .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
+  .nav-links.active li:nth-child(4) { transition-delay: 0.4s; }
+  .nav-links.active li:nth-child(5) { transition-delay: 0.5s; }
+  
+  .nav-links a {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .nav-links a:after {
+    display: none;
+  }
+  
+  .nav-links a.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
   .hero-text h1 {
     font-size: 2.5rem;
   }
@@ -848,126 +844,6 @@ a {
   }
 }
 
-/* Updated Mobile Menu Styles */
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--rnr-blue);
-  cursor: pointer;
-  z-index: 1001;
-  transition: var(--rnr-transition);
-}
-
-.mobile-menu-btn:hover {
-  color: var(--rnr-orange);
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-}
-
-.nav-links li {
-  margin-left: 2rem;
-}
-
-.nav-links a {
-  font-weight: 600;
-  color: var(--rnr-dark);
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.nav-links a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--rnr-orange);
-  transition: var(--rnr-transition);
-}
-
-.nav-links a:hover:after,
-.nav-links a.active:after {
-  width: 100%;
-}
-
-/* Mobile Menu Overlay Style */
-@media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: block;
-    order: 3;
-  }
-  
-  .nav-links {
-    position: fixed;
-    top: 72px;
-    left: 0;
-    width: 100%;
-    background: var(--rnr-hero-gradient);
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-    gap: 1.5rem;
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 1000;
-    box-shadow: none;
-    pointer-events: none;
-  }
-  
-  .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: all;
-    box-shadow: 0 10px 25px rgba(10, 36, 99, 0.2);
-  }
-  
-  .nav-links li {
-    margin: 0;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: all 0.5s ease;
-  }
-  
-  .nav-links.active li {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Staggered animation for menu items */
-  .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
-  .nav-links.active li:nth-child(2) { transition-delay: 0.2s; }
-  .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
-  .nav-links.active li:nth-child(4) { transition-delay: 0.4s; }
-  .nav-links.active li:nth-child(5) { transition-delay: 0.5s; }
-  
-  .nav-links a {
-    color: white;
-    font-size: 1.2rem;
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-  
-  .nav-links a:after {
-    display: none;
-  }
-  
-  .nav-links a.active {
-    background: rgba(255, 255, 255, 0.2);
-  }
-} 
-
 /* Tracking Page Specific Styles */
 .tracking-form-container {
   max-width: 600px;
@@ -981,13 +857,12 @@ a {
   padding: 2rem;
   box-shadow: var(--rnr-shadow-sm);
 }
+
 @media (max-width: 768px) {
   .track-btn {
     height: 40px;
   }
 }
-
-
 
 .form-group {
   margin-bottom: 1.5rem;
@@ -1640,9 +1515,7 @@ textarea.form-control {
   }
 }
 
-/* ======================
-   SERVICE FILTER BUTTONS
-   ====================== */
+/* Service Filter Buttons */
 .service-filter {
   max-width: 800px;
   margin: 0 auto 3rem;
@@ -1660,25 +1533,21 @@ textarea.form-control {
   border: 2px solid transparent;
 }
 
-/* All Services button (always orange) */
 .service-filter .btn-primary {
   background-color: var(--rnr-orange);
   color: white;
 }
 
-/* Category filter buttons (default state) */
 .service-filter .btn-secondary {
   background-color: var(--rnr-blue);
   color: white;
 }
 
-/* Active state for category buttons */
 .service-filter .btn-secondary.active {
   background-color: var(--rnr-orange);
   color: white;
 }
 
-/* Hover states */
 .service-filter .btn-secondary:hover:not(.active) {
   background-color: var(--rnr-light-blue);
 }
@@ -1687,93 +1556,5 @@ textarea.form-control {
   .service-filter .btn {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
-  }
-}
-
-/* ======================
-   MOBILE NAVIGATION
-   ====================== */
-@media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: block;
-    order: 3;
-    z-index: 1001;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--rnr-gradient-blue);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 6rem 2rem 2rem;
-    gap: 1.5rem;
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 1000;
-    box-shadow: none;
-    pointer-events: none;
-  }
-  
-  .nav-links.active {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: all;
-    box-shadow: 0 10px 25px rgba(10, 36, 99, 0.2);
-  }
-  
-  .nav-links li {
-    margin: 0;
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: all 0.5s ease;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .nav-links.active li {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
-  /* Staggered animation for menu items */
-  .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
-  .nav-links.active li:nth-child(2) { transition-delay: 0.2s; }
-  .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
-  .nav-links.active li:nth-child(4) { transition-delay: 0.4s; }
-  .nav-links.active li:nth-child(5) { transition-delay: 0.5s; }
-  
-  .nav-links a {
-    color: white;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    display: block;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-  
-  .nav-links a:after {
-    display: none;
-  }
-  
-  .nav-links a.active {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-  }
-
-  .mobile-menu-btn {
-    position: relative;
-    z-index: 1001;
   }
 }
