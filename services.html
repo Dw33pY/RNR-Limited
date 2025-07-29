@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | RNR Forwarding - Comprehensive Logistics Solutions</title>
+  <meta name="description" content="Discover RNR Forwarding's complete range of logistics services including sea freight, air freight, customs clearance, warehousing, and last-mile delivery.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <img src="assets/RNR3.png" alt="RNR Forwarding Logo" class="logo">
+      </div>
+      
+      <!-- <div class="brand-name">RNR Forwarding</div> -->
+      
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="track.html">Track Shipment</a></li>
+        <li><a href="quote.html">Get Quote</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Services Hero -->
+  <section class="hero" >
+    <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+      <div class="hero-text">
+        <h1>Our Comprehensive Services</h1>
+        <p>End-to-end logistics solutions designed for the African market</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Filter -->
+  <section class="section bg-gray-50">
+    <div class="section-title">
+      <h2>Find the Right Service</h2>
+      <p>Filter our services by category to find the perfect solution for your needs</p>
+    </div>
+    
+    <div class="service-filter" style="max-width: 800px; margin: 0 auto 3rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+      <button class="btn btn-primary active" data-filter="all">All Services</button>
+      <button class="btn btn-secondary" data-filter="shipping">Shipping</button>
+      <button class="btn btn-secondary" data-filter="customs">Customs</button>
+      <button class="btn btn-secondary" data-filter="storage">Storage</button>
+      <button class="btn btn-secondary" data-filter="delivery">Delivery</button>
+      <button class="btn btn-secondary" data-filter="special">Specialized</button>
+    </div>
+    
+    <div class="services-grid">
+      <!-- Sea Freight -->
+      <div class="service-card" data-category="shipping" id="sea-freight">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sea Freight">
+        </div>
+        <div class="service-content">
+          <h3><i class="fas fa-ship"></i> Sea Freight</h3>
+          <p>Comprehensive ocean freight solutions with competitive rates and reliable schedules.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Full Container Load (FCL)</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Less than Container Load (LCL)</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Refrigerated (Reefer) Containers</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Project Cargo Handling</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Port-to-Port or Door-to-Door</span>
+            </div>
+          </div>
+          <a href="quote.html" class="btn btn-primary">Request Quote</a>
+        </div>
+      </div>
+      
+      <!-- Air Freight -->
+      <div class="service-card" data-category="shipping" id="air-freight">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Air Freight">
+        </div>
+        <div class="service-content">
+          <h3><i class="fas fa-plane"></i> Air Freight</h3>
+          <p>Fast and secure air cargo services for time-sensitive shipments.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Express Air Freight</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Consolidation Services</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Charter Services</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Dangerous Goods Handling</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Temperature-Controlled</span>
+            </div>
+          </div>
+          <a href="quote.html" class="btn btn-primary">Request Quote</a>
+        </div>
+      </div>
+      
+      <!-- Customs Clearance -->
+      <div class="service-card" data-category="customs" id="customs">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1600267165477-6d4cc741b379?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Customs Clearance">
+        </div>
+        <div class="service-content">
+          <h3><i class="fas fa-file-contract"></i> Customs Clearance</h3>
+          <p>Expert handling of all customs procedures and documentation.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Import/Export Documentation</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Duty & Tax Calculation</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Bonded Warehousing</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Pre-Clearance Services</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Customs Consultancy</span>
+            </div>
+          </div>
+          <a href="quote.html" class="btn btn-primary">Request Quote</a>
+        </div>
+      </div>
+      
+      <!-- Warehousing -->
+      <div class="service-card" data-category="storage" id="warehousing">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1602108987421-11b1c5163726?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Warehousing">
+        </div>
+        <div class="service-content">
+          <h3><i class="fas fa-warehouse"></i> Warehousing</h3>
+          <p>Secure storage solutions with advanced inventory management.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Bonded Warehouses</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Temperature-Controlled Storage</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Inventory Management</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Pick & Pack Services</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Cross-Docking</span>
+            </div>
+          </div>
+          <a href="quote.html" class="btn btn-primary">Request Quote</a>
+        </div>
+      </div>
+      
+      <!-- Last-Mile Delivery -->
+      <div class="service-card" data-category="delivery" id="delivery">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1524&q=80" alt="Last-Mile Delivery">
+        </div>
+        <div class="service-content">
+          <h3><i class="fas fa-truck"></i> Last-Mile Delivery</h3>
+          <p>Efficient distribution network across Kenya and East Africa.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Nairobi Same-Day Delivery</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Upcountry Distribution</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>White Glove Services</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Real-Time Tracking</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Cash on Delivery</span>
+            </div>
+          </div>
+          <a href="quote.html" class="btn btn-primary">Request Quote</a>
+        </div>
+      </div>
+      
+      <!-- Specialized Services -->
+      <div class="service-card" data-category="special" id="specialized">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Specialized Services">
+        </div>
+        <div class="service-content">
+          <h3><i class="fas fa-star"></i> Specialized Services</h3>
+          <p>Custom solutions for unique logistics challenges.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Vehicle Importation</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Perishable Goods Handling</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Dangerous Goods</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Oversized Cargo</span>
+            </div>
+            <div class="service-feature">
+              <i class="fas fa-check"></i>
+              <span>Exhibition Logistics</span>
+            </div>
+          </div>
+          <a href="quote.html" class="btn btn-primary">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Need a Custom Logistics Solution?</h2>
+    <p>Our experts will design a service package tailored to your specific requirements.</p>
+    <div class="cta-buttons">
+      <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+      <a href="contact.html" class="btn btn-secondary">Speak to an Expert</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <!-- <img src="assets/logo.png" alt="RNR Forwarding Logo"> -->
+          <span>RNR Forwarding</span>
+        </div>
+        <p>Bridging continents with seamless logistics solutions since 2010. Your trusted partner for freight forwarding in Africa.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="track.html">Track Shipment</a></li>
+          <li><a href="quote.html">Get Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="services.html#sea-freight">Sea Freight</a></li>
+          <li><a href="services.html#air-freight">Air Freight</a></li>
+          <li><a href="services.html#customs">Customs Clearance</a></li>
+          <li><a href="services.html#warehousing">Warehousing</a></li>
+          <li><a href="services.html#delivery">Last-Mile Delivery</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> RNR Plaza, Mombasa Road, Nairobi, Kenya</p>
+        <p><i class="fas fa-phone-alt"></i> +254 722522707 | 713355801</p>
+        <p><i class="fas fa-envelope"></i> info@rnrforwarding.com</p>
+        <p><i class="fas fa-clock"></i> Mon-Fri: 8AM - 5PM | Sat: 9AM - 1PM</p>
+        
+        <div class="payment-methods">
+          <h4>Accepted Payments</h4>
+          <div class="payment-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1200px-M-PESA_LOGO-01.svg.png" alt="M-Pesa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Airtel-Money-Logo.png/640px-Airtel-Money-Logo.png" alt="Airtel Money">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/PayPal_logo.svg/2560px-PayPal_logo.svg.png" alt="PayPal">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 RNR Forwarding. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
