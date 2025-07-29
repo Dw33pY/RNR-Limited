@@ -148,10 +148,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.service-filter button');
     const serviceCards = document.querySelectorAll('.service-card');
     
+    // Initialize - show all services by default
+    serviceCards.forEach(card => {
+      card.style.display = 'block';
+    });
+    
     filterButtons.forEach(button => {
       button.addEventListener('click', function() {
         // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active');
+          // Reset all category buttons to secondary state
+          if (btn.classList.contains('btn-secondary')) {
+            btn.classList.add('btn-secondary');
+          }
+        });
+        
+        // Set clicked button as active
         this.classList.add('active');
         
         const filterValue = this.getAttribute('data-filter');
@@ -160,8 +173,14 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceCards.forEach(card => {
           if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
             card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 50);
           } else {
             card.style.display = 'none';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
           }
         });
       });

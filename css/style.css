@@ -640,43 +640,21 @@ a {
   margin-top: 0.25rem;
 }
 
-/* .payment-methods {
-  margin-top: 1.5rem;
-}
-
-.payment-methods h4 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.payment-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.payment-icons img {
-  height: 24px;
-  background: white;
-  padding: 0.25rem;
-  border-radius: 4px;
-} */
 
 .payment-methods {
   margin-top: 2rem;
 }
 
-.payment-methods h4 {
+/* .payment-methods h4 {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.9);
-}
+} */
 
 .payment-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -692,11 +670,30 @@ a {
 .payment-icons img:hover {
   opacity: 1;
   transform: translateY(-2px);
+  transform: scale(1.5);
+}
+
+.payment-methods h4 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.payment-methods h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--rnr-orange);
 }
 
 /* Specific adjustments for certain logos */
 .payment-icons img[alt="M-Pesa"] {
-  height: 28px; /* Slightly larger for better visibility */
+  height: 38px; /* Slightly larger for better visibility */
 }
 
 .payment-icons img[alt="Airtel Money"] {
@@ -704,10 +701,15 @@ a {
   height: 22px;
 }
 
-.payment-icons img[alt="Safaricom"] {
-  filter: none;
-  height: 20px;
+.payment-icons img[alt= "Mastercard"] {
+  height: 38px; /* Adjusted for better visibility */
 }
+
+.payment-icons img[alt="BankTransfer"] {
+  height: 28px; /* Adjusted for better visibility */
+}
+
+
 
 .footer-bottom {
   text-align: center;
@@ -1631,5 +1633,55 @@ textarea.form-control {
     font-size: 2rem;
     width: 70px;
     height: 70px;
+  }
+}
+
+/* ======================
+   SERVICE FILTER BUTTONS
+   ====================== */
+.service-filter {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.service-filter .btn {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  transition: var(--rnr-transition);
+  border: 2px solid transparent;
+}
+
+/* All Services button (always orange) */
+.service-filter .btn-primary {
+  background-color: var(--rnr-orange);
+  color: white;
+}
+
+/* Category filter buttons (default state) */
+.service-filter .btn-secondary {
+  background-color: var(--rnr-blue);
+  color: white;
+}
+
+/* Active state for category buttons */
+.service-filter .btn-secondary.active {
+  background-color: var(--rnr-orange);
+  color: white;
+}
+
+/* Hover states */
+.service-filter .btn-secondary:hover:not(.active) {
+  background-color: var(--rnr-light-blue);
+}
+
+@media (max-width: 768px) {
+  .service-filter .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }
