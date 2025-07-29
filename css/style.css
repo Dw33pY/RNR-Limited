@@ -94,6 +94,28 @@ a {
   transform: translateY(-2px);
 }
 
+/* Add this to your CSS */
+.text-center {
+  text-align: center;
+  margin-top: 60px; /* You had this in your btn-tertiary class */
+}
+
+.btn-tertiary {
+  display: inline-block; /* Important for text-align center to work */
+  background-color: var(--rnr-teal);
+  color: white;
+  box-shadow: 0 4px 14px rgba(62, 146, 204, 0.35);
+  padding: 0.8rem 2rem; /* Match your other buttons */
+  border-radius: 50px; /* Match your other buttons */
+  font-weight: 600; /* Match your other buttons */
+}
+
+.btn-tertiary:hover {
+  background-color: var(--rnr-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(62, 146, 204, 0.4);
+}
+
 /* Navigation */
 .navbar {
   position: fixed;
