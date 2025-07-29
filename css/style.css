@@ -271,7 +271,7 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: 105px;
+  margin-top: 110px;
 }
 
 .hero::before {
@@ -767,6 +767,11 @@ a {
     display: block;
     position: relative;
     z-index: 1001;
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Slightly larger for better touch */
+    color: var(--rnr-blue);
+    padding: 0.5rem;
   }
 
   .nav-links {
@@ -779,7 +784,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 6rem 2rem 2rem;
+    padding: 5rem 1rem 2rem;
     gap: 1.5rem;
     transform: translateX(-100%);
     opacity: 0;
@@ -788,6 +793,7 @@ a {
     box-shadow: none;
     pointer-events: none;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   }
   
   .nav-links.active {
@@ -798,7 +804,8 @@ a {
   }
   
   .nav-links li {
-    margin: 0;
+    width: 100%;
+    margin: 0.5rem 0;
     opacity: 0;
     transform: translateX(-20px);
     transition: all 0.5s ease;
@@ -820,13 +827,13 @@ a {
   
   .nav-links a {
     color: white;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 50px;
     transition: all 0.3s ease;
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
   }
   
   .nav-links a:hover {
@@ -849,6 +856,12 @@ a {
   .cta-buttons {
     flex-direction: column;
     align-items: center;
+  }
+  @media (max-height: 700px) {
+    .nav-links {
+      padding-top: 4rem;
+      justify-content: flex-start;
+    }
   }
 }
 
